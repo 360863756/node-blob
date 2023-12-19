@@ -1,0 +1,52 @@
+Arguments: 
+  /opt/homebrew/Cellar/nvm/0.39.4/versions/node/v16.20.2/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add @types/express
+
+PATH: 
+  /opt/homebrew/opt/nvm/versions/node/v16.20.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/opt/homebrew/opt/nvm/versions/node/v16.20.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.20.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/daizhigang/Library/Caches/Yarn/v6/npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity/node_modules/ms/index.js' -> '/Users/daizhigang/WorkSpace/node-blob/node_modules/sequelize/node_modules/ms/index.js'
+
+npm manifest: 
+  {
+    "name": "blob",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon --watch '**/*.ts' --exec ts-node -r tsconfig-paths/register index.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.1.1",
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "jsonwebtoken": "^9.0.2",
+      "multer": "1.4.5-lts.1",
+      "mysql2": "^3.6.3",
+      "sequelize": "^6.34.0"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.2",
+      "ts-node": "^10.9.1",
+      "tsconfig-paths": "^4.2.0",
+      "typescript": "^5.3.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
