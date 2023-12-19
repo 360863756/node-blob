@@ -2,4 +2,4 @@ async function uploadFile() {
 // todo
 }
 
-module.exports = { uploadFile };
+export default { uploadFile };

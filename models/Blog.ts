@@ -52,4 +52,4 @@ Tag.belongsToMany(Blog, {
 Blog.belongsTo(User, { foreignKey: "userId", as: "user" });
 User.hasMany(Blog, { foreignKey: "userId", as: "user" });
 
-module.exports = Blog;
+export default Blog;

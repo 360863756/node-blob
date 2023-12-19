@@ -74,4 +74,4 @@ async function getUserList(req: Request, res: Response){
   }
 }
 
-module.exports = { register, login , getUserList };
+export default  { register, login , getUserList };

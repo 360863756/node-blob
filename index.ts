@@ -1,12 +1,13 @@
 import sequelize from "./config/database"
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const path = require("path");
-const authRoutes = require("./routes/auth");
-const blogRoutes = require("./routes/blogs");
-const tagRoutes = require("./routes/tags");
-const fileRoutes = require("./routes/file");
+import express from "express"
+import bodyParser from "body-parser"
+import cors from "cors"
+import path from "path"
+import authRoutes from "./routes/auth"
+import blogRoutes from "./routes/blogs"
+import tagRoutes from "./routes/tags"
+import fileRoutes from "./routes/file"
+
 const app = express();
 
 

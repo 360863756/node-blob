@@ -14,4 +14,4 @@ async function deleteTag() {
 // todo
 }
 
-module.exports = { createTag, getTags, updateTag, deleteTag };
+export default { createTag, getTags, updateTag, deleteTag };

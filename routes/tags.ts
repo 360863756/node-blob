@@ -1,6 +1,7 @@
-const tagExpress = require('express');
+
+import tagExpress from "express"
+import tagController from "../service/tagService"
 const tagRouter = tagExpress.Router();
-const tagController = require('../service/tagService');
 
 // 创建标签
 tagRouter.post('/create', tagController.createTag);
@@ -9,4 +10,4 @@ tagRouter.get('/query', tagController.getTags);
 // 根据 id 删除标签
 tagRouter.delete('/delete/:id', tagController.deleteTag);
 
-module.exports = tagRouter;
+export default tagRouter;

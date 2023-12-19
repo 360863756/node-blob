@@ -18,7 +18,7 @@ async function createBlog() {
     // todo
   }
   
-  module.exports = {
+export default {
     createBlog,
     getBlogList,
     getBlogById,

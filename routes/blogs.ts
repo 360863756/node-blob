@@ -1,6 +1,7 @@
-const blobExpress = require('express');
+import blobExpress from "express"
+import blogController from "../service/blogService"
+
 const blobRouter = blobExpress.Router();
-const blogController = require('../service/blogService');
 
 // 创建博客
 blobRouter.post('/create', blogController.createBlog);
@@ -13,4 +14,4 @@ blobRouter.patch('/update/:id', blogController.updateBlog);
 // 根据 id 删除博客
 blobRouter.delete('/delete/:id', blogController.deleteBlog);
 
-module.exports = blobRouter;
+export default blobRouter;
