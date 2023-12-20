@@ -1,4 +1,4 @@
-import * as Sequelize from "Sequelize"
+import Sequelize from "Sequelize"
 
 const sequelize = new Sequelize.Sequelize(
   "blob",

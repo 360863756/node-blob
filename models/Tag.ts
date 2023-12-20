@@ -1,5 +1,5 @@
 import { DataTypes, Model } from "sequelize"
-const sequelize = require("../config/database");
+import sequelize from "../config/database"
 class Tag extends Model {}
 
 Tag.init(

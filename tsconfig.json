@@ -14,7 +14,10 @@
       "strictPropertyInitialization": false,
       "strict": true,
       "outDir": "out",
-      "sourceMap": false
+      "sourceMap": false,
+      "allowJs": true,
+      "noEmit": true,
+      "allowImportingTsExtensions": true
     },
     "include": [
       "./**/*.ts"

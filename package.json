@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon --watch '**/*.ts' --exec ts-node -r tsconfig-paths/register index.ts"
+    "start": "nodemon --watch '**/*.ts' --exec ts-node --esm -r tsconfig-paths/register index.ts"
   },
   "author": "",
   "license": "ISC",

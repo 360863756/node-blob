@@ -52,21 +52,10 @@ async function login(req: Request, res: Response) {
   }
 }
 
-export interface user {
-  id: Number,
-  username: String,
-  password: String,
-  nickname: String,
-}
-
-export interface userList {
-  list: user[]
-}
-
 async function getUserList(req: Request, res: Response){
   try {
     const userList = await User.findAll();
-    const resMessage : IReturnMessage<userList> = { data: userList, no: 1 }
+    const resMessage : IReturnMessage<User[]> = { data: userList, no: 1 }
     res.json(resMessage);
   } catch (error) {
     const resMessage : IReturnMessage<string> = { data: "Failed", no: 1 }

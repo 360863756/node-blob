@@ -1,7 +1,7 @@
 import { DataTypes, Model } from "sequelize"
-const sequelize = require("../config/database");
-const User = require("./User");
-const Tag = require("./Tag");
+import sequelize from "../config/database"
+import User from "./User"
+import Tag from "./Tag"
 
 class Blog extends Model {}
 

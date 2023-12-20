@@ -1,7 +1,13 @@
 import { DataTypes, Model } from "sequelize"
-const sequelize = require("../config/database");
+import sequelize from "../config/database"
 
-class User extends Model {}
+class User extends Model {
+  lastOnlineTime: Date;
+  id: string;
+  username: string;
+  password: string;
+  nickname: string;
+}
 
 User.init(
   {
