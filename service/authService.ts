@@ -4,6 +4,16 @@ import jwt from "jsonwebtoken"
 import User from "../models/User"
 
 import type {IReturnMessage} from "./types"
+import { Service } from 'typedi';
+
+export const LOGIN = "login";
+
+@Service(LOGIN)
+export class Login {
+  async login(req: Request, res: Response) {
+    const { username, password } = req.body;
+  }
+}
 
 // 注册
 async function register(req: Request, res: Response) {

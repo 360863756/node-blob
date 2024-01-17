@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import sequelize from "./config/database"
 import express from "express"
 import bodyParser from "body-parser"
