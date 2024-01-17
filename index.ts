@@ -1,13 +1,16 @@
 import 'reflect-metadata';
+import { useContainer, useExpressServer } from 
+'routing-controllers';
+import { Container } from 'typedi';
 import sequelize from "./config/database"
 import express from "express"
 import bodyParser from "body-parser"
 import cors from "cors"
 import path from "path"
-import authRoutes from "./routes/auth"
-import blogRoutes from "./routes/blogs"
-import tagRoutes from "./routes/tags"
-import fileRoutes from "./routes/file"
+import { loginController } from "./routes/auth"
+// import blogRoutes from "./routes/blogs"
+// import tagRoutes from "./routes/tags"
+// import fileRoutes from "./routes/file"
 
 const app = express();
 
@@ -17,10 +20,15 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use("/tempFiles", express.static(path.join(__dirname, "tempFiles")));
 
-app.use("/auth", authRoutes);
-app.use("/blogs", blogRoutes);
-app.use("/tags", tagRoutes);
-app.use("/upload", fileRoutes);
+useExpressServer(app, {
+  controllers:[loginController]
+})
+
+useContainer(Container);
+
+// app.use("/blogs", blogRoutes);
+// app.use("/tags", tagRoutes);
+// app.use("/upload", fileRoutes);
 
 sequelize
   .sync()

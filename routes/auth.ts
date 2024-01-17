@@ -1,10 +1,25 @@
-import authExpress from "express"
-import authController from "../service/authService"
+import { Post, Controller, Req, Res, Get } from "routing-controllers";
+import { LOGIN, LoginInterface } from "service/authService";
+import { Inject, Service } from "typedi";
+import { Request, Response } from 'express';
 
-const authRouter = authExpress.Router();
+@Controller()
+@Service()
+export class loginController{
+    @Inject(LOGIN) private readonly user: LoginInterface;
 
-authRouter.post('/register', authController.register);
-authRouter.post('/login', authController.login);
-authRouter.get('/getUserList', authController.getUserList);
+    @Post("/auth/register")
+    register(@Req() req: Request,@Res() res: Response){
+        this.user.register(req, res)
+    }
 
-export default authRouter;
+    @Post("/auth/login")
+    login(@Req() req: Request,@Res() res: Response){
+        this.user.login(req, res)
+    }
+
+    @Get("/auth/getUserList")
+    getUserList(@Req() req: Request,@Res() res: Response){
+        this.user.getUserList(req, res)
+    }
+}
